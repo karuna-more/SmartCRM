@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart CRM - User Home</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f5f7fa;
+    }
+    header {
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        color: white;
+        padding: 20px 30px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    nav {
+        background: #764ba2;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 8px 15px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        background: #667eea;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+    .welcome {
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    .section {
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+        margin-bottom: 20px;
+        color: #764ba2;
+        font-size: 22px;
+        border-bottom: 2px solid #e6e6ff;
+        padding-bottom: 10px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background: #f0f0ff;
+        color: #333;
+    }
+    tr:hover {
+        background: #fafafa;
+    }
+    .ticket-open { color: green; font-weight: bold; }
+    .ticket-closed { color: red; font-weight: bold; }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #764ba2;
+        color: white;
+        margin-top: 40px;
+    }
+</style>
+</head>
+<body>
+
+<header>Smart CRM - User Dashboard</header>
+
+<div class="container">
+    <div class="welcome">
+        Welcome back! Here you can view your recent orders and any support tickets you have raised.
+    </div>
+
+    <nav>
+        <a href="#orders">My Orders</a>
+        <a href="#tickets">My Tickets</a>
+        <a href="#profile">Profile</a>
+        <a href="#logout">Logout</a>
+    </nav>
+
+    <!-- Orders Section -->
+    <div class="section" id="orders">
+        <h2>My Orders</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Product</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example data - Replace with dynamic DB values -->
+                <tr>
+                    <td>#1001</td>
+                    <td>Wireless Mouse</td>
+                    <td>2025-09-20</td>
+                    <td>Delivered</td>
+                </tr>
+                <tr>
+                    <td>#1002</td>
+                    <td>Bluetooth Keyboard</td>
+                    <td>2025-09-22</td>
+                    <td>Shipped</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Tickets Section -->
+    <div class="section" id="tickets">
+        <h2>My Support Tickets</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Issue</th>
+                    <th>Date Raised</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example data - Replace with dynamic DB values -->
+                <tr>
+                    <td>#T-2001</td>
+                    <td>Order not delivered on time</td>
+                    <td>2025-09-21</td>
+                    <td class="ticket-open">Open</td>
+                </tr>
+                <tr>
+                    <td>#T-2002</td>
+                    <td>Defective product received</td>
+                    <td>2025-09-19</td>
+                    <td class="ticket-closed">Closed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Smart CRM. All Rights Reserved.
+</footer>
+
+</body>
+</html>

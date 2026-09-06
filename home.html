@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart CRM Login</title>
+<style>
+body {
+    background: linear-gradient(135deg,#43cea2,#185a9d);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.form-container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 350px;
+}
+h2 {
+    text-align: center;
+    color: #185a9d;
+    margin-bottom: 25px;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #185a9d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background-color: #116d8a;
+}
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+p a {
+    color: #185a9d;
+    text-decoration: none;
+}
+p a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Smart CRM Login</h2>
+    <form method="POST" action="login.php">
+        <div class="form-group">
+            <input type="text" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+    </form>
+    <p>Don't have an account? <a href="registration.html">Register here</a></p>
+</div>
+</body>
+</html>
